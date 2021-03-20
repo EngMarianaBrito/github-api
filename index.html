@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub-Api</title>
+</head>
+<body>
+    <h1>GitHub-Api</h1>
+
+    <!--BUSCAR USER-->
+    <input type="text" name="buscauser" id="buscaUser">
+    <!--NÃO FOI ENCOTRADO-->
+    <div class = "list">
+        <li id ="naoEncotrado" style="display:none;"> SEM RESULTADOS</li>
+    </div>
+    <div id ="mensagem"></div>
+
+    <!--INICIANDO JS E SUAS CONFIGURAÇÕES-->
+    <script type="text/javascript">
+
+    $("#buscaUser").on("keyup", function() {
+           $("#msg").empty(); //Input executa uma função
+            let value = $(this).val().toLowerCase(); //armazenamento da variavel
+            //filtra as div em busca de um determinado valor
+            $("#lista div").filter(function() {
+                //exibindo a div com os resultados
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                 verificacao();
+            });
+        });
+
+    function verificacao(){
+        var resultEncontrado;
+        var html = $('#lista').contents();
+            for(var item of html){
+                if(!$(item).is(":hidden") && $(item).text().trim().length){
+                    resultEncontrado = true;
+                break;
+                }
+            }
+        if(!resultEncontrado){
+            $("#msg").html("<h1> SEM RESULTADOS</h1>");
+        }
+    }  
+    </script>
+     
+    
+    
+</body>
+</html>
