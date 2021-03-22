@@ -1,0 +1,12 @@
+/* Elementos de estilos do site*/
+
+/* PALETA DE CORES - SIMPLIFICADAS */
+:root {
+ --backgroud-color: #bce6ff;
+ --color : #2d82b5; 
+}
+
+*{
+    padding: 1;
+    margin: 1;
+}
