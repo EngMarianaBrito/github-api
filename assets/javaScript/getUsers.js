@@ -1,3 +1,5 @@
+//Detalhamento do usuário
+
 $(document).ready(function () {
     var url = new URL(window.location);
     var user = url.searchParams.get("user");
@@ -20,9 +22,7 @@ $(document).ready(function () {
             `; 
             console.log(members);
     
-                $('.user').append(members);     
-            
-        }
-        
+                $('.user').append(members);        
+        }     
     });
-});
+});         

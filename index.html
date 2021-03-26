@@ -4,53 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub</title>
+    <link rel="stylesheet" href="assets/css/page.css">
+    <title>GitHub-Api</title>
 </head>
-<body >
+<body>
     <!--INICIANDO JS E SUAS CONFIGURAÇÕES-->
-    <header> <h1> GITHUB TERESERACT </h1> </header>
-
-    
-    <!--IMPORTANDO E ADICIONANDO-->
-    <script src="assets/javaScript/jquery-3.3.1.min.js"></script>
-    <script src="assets/javaScript/getUser.js"></script>
-    <script src="assets/javaScript/main.js"></script>
-    <script src="assets/javaScript/publicMembers.js"></script>
-    <link rel="stylesheet" href="assets/css/pageIndex.css">
-    
+    <h1>GitHub-Api</h1>
 
     <!--BUSCAR USER-->
     <input type="text" name="buscauser" id="buscaUser">
-
     <!--NÃO FOI ENCOTRADO-->
-    <div class="list">
-        <li id="nenhumProduto" style="display: none;"> SEM RESULTADOS</li>
+    <div class = "list">
+        <li id ="naoEncotrado" style="display:none;"> SEM RESULTADOS</li>
     </div>
-    <div id = "mensagem" > </div>
-    
+    <div id ="mensagem"></div>
+
     <script type="text/javascript">
-        $("#buscaUser").on("keyup", function() {
-           $("#mensagem").empty();
-            let value = $(this).val().toLowerCase();
+
+    $("#buscaUser").on("keyup", function() {
+           $("#msg").empty(); //Input executa uma função
+            let value = $(this).val().toLowerCase(); //armazenamento da variavel
+            //filtra as div em busca de um determinado valor
             $("#lista div").filter(function() {
+                //exibindo a div com os resultados
                 $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                verificacao();
+                 verificacao();
             });
         });
 
-        function verificacao(){
-            var resultadoEncontrado;
-            var html = $('#lista').contents();
-
+    function verificacao(){
+        var resultEncontrado;
+        var html = $('#lista').contents();
             for(var item of html){
                 if(!$(item).is(":hidden") && $(item).text().trim().length){
-                    resultadoEncontrado = true;
+                    resultEncontrado = true;
                 break;
                 }
-            }if(!resultadoEncontrado){
-                $("#mensagem").html("<h1> SEM RESULTADOS</h1>");
             }
+        if(!resultEncontrado){
+            $("#msg").html("<h1> SEM RESULTADOS</h1>");
         }
-        </script>
+    }  
+    </script>
 </body>
 </html>
