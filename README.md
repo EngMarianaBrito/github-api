@@ -43,38 +43,44 @@
 
 <br>
 
-## :dart: 🎯 About ##
+## :dart: About ##
 
-- Este desafio consiste em uma listagem dos membros da Tesseract e exibição de detalhes sobre a pessoa específica.
+- Este desafio consiste em uma listagem dos membros da Tesseract e exibição de detalhes sobre uma pessoa específica.
 
-- Deve-se criar uma página que tenha os seguintes requisitos: 
-  + Lista com os atuais membros no Github, com login e foto;
-  + Campo de filtro para filtrar os membros (por login);
-  + Ao clicar em um membro, exibir informações informação pessoa: 
-      - Nome; 
-      - Quantidade de repositórios; 
-      - Quantidade de seguidores; 
-      - Data em que entrou pessoa no Github.
+- Deve-se criar uma página que tenha os seguintes requisitos:
 
+  +Lista com os membros atuais no Github, com login e foto;
+  +Campo de filtro para filtrar os membros (por login);
+  +Ao clicar em um membro, exibir informações da pessoa:
+    -Nome;
+    -Quantidade de repositórios;
+    -Quantidade de seguidores;
+    -Dados em que entrou pessoa no Github.
 
 ## :rocket: Technologies ##
 
 The following tools were used in this project:
 
-- [JavaScript]
-- [CSS]
-- [Jquery]
-- [HTML]
+- HTML
+- JavaScript
+- CSS
+- JQuery
 
 ## :white_check_mark: Requirements ##
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
+Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [VsCode](https://code.visualstudio.com/download) installed.
 
 ## :checkered_flag: Starting ##
 
 ```bash
 # Clone this project
 $ git clone https://github.com/EngMarianaBrito/github-api
+
+# Access
+$ cd github-api
+
+# Open - > LiveServe
+```
 
 ## :memo: License ##
 
