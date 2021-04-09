@@ -1,5 +1,4 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="GITHUB API" />
 
   &#xa0;
 
@@ -26,14 +25,13 @@
 <h1>Status</h1>
 
 <h4 align="center"> 
-  GITHUB API 🚀 
+  Github Api 🚀 
 
 
 <hr> 
 
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0; 
-  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
   <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
   <a href="#memo-license">License</a> &#xa0; | &#xa0;
@@ -47,19 +45,13 @@
   Este desafio consiste em uma listagem dos membros do Tesseract e exibição de detalhes sobre a pessoa selecionada.
 
   Deve-se criar uma página que tenha os seguintes requisitos :
-    + Lista com os atuais membros no Github, com login e foto;7
-    + Campo de filtro para filtrar os membros (por login);
-    + Ao clicar em um membro ,exivir informações daquela pessoa:
-      - Nome;
-      - Quantidade de repositórios;
-      - Quantidade de seguidores;
-      - Data em que a pessoa entrou no Github
-
-## :sparkles: Features ##
-
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+      + Lista com os atuais membros no Github, com login e foto;7
+      + Campo de filtro para filtrar os membros (por login);
+      + Ao clicar em um membro ,exivir informações daquela pessoa:
+        - Nome;
+        - Quantidade de repositórios;
+        - Quantidade de seguidores;
+        - Data em que a pessoa entrou no Github
 
 ## :rocket: Technologies ##
 
