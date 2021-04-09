@@ -1,0 +1,129 @@
+:root
+{
+    font-size: 95%;
+}
+*
+{
+    margin: 2;
+    padding: 2;
+    box-sizing: border-box;
+}
+
+html,body
+{
+    height: 100vh;
+}
+
+body
+{
+
+    background: #F0F0F7;;
+    display: center;
+    align-items:center;
+    justify-content: center;
+}
+
+
+body,input,button,textarea
+{
+    font-weight: 500 ;
+    font-family: Poppins;
+    font-size: 1.6rem ;
+    color: var(--color-text-base);
+}
+
+body,button
+{
+    font : 300 1.4rem Arial;
+}
+
+body
+{
+    background-color: #5438DC;
+    text-align: center;
+}
+
+html 
+{
+	font-weight:bolder;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+header
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+header h1
+{
+    color: #fcfcfc;
+}
+
+#lista
+{
+    display: flex;
+    justify-items: right;
+    flex-wrap: nowrap;
+    max-width: 900px;
+    margin-bottom: 40px;
+}
+
+#lista .membro
+{
+    display: flex;
+    justify-items: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#lista div.membro
+{
+    background-color: #ebeaf3;
+    min-height: 10px;
+    border-radius:0px 40px ;
+    display: grid;
+    flex-direction: unset;
+    justify-content: center;
+    align-items: center;    
+}
+
+.membro img
+{
+    height: 250px;
+    width: 260px;
+    border-radius: 50px 50px 0px 0px;
+    margin-bottom: 30px;  
+}
+
+.membro strong
+{
+    color: #655af8;
+    font-size: 1.5rem;
+    margin-top: -20px;
+    font-weight: lighter;
+}
+
+.myButton 
+{
+	box-shadow: 10px 10px 10px -7px #f7f4f4;
+	background:linear-gradient(to bottom, #877ff1 100%, #faf6f6 10%);
+	background-color:#080000;
+	border-radius:40px;
+	cursor:pointer;
+	color:#ffffff;
+    
+    font-family:Arial, sans-serif;
+	font: size 10px;
+	font-weight:bolder;
+	padding:10px 90px;
+    
+	text-decoration:none;
+	text-shadow:1px 1px 1px #272727;
+}

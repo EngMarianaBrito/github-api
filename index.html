@@ -4,47 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/page.css">
-    <title>GitHub-Api</title>
+     <link rel="stylesheet" href="assets/css/styleIndex.css">
+    <title>GitHub</title>
 </head>
-<body>
+<body >
     <!--INICIANDO JS E SUAS CONFIGURAÇÕES-->
-    <h1>GitHub-Api</h1>
+    <header> <h1> GitHub Grupo Tesseract </h1> </header>
+    <h2>Tudo que você precisa saber sobre o grupo Tesseract.</h2>
+    <h3>obs:Tente não se apaixonar!</h3>
+
+    <!--IMPORTANDO E ADICIONANDO-->
+    <link rel="stylesheet" href="assets/css/styleUser.css">
+    <script src = "assets/js/jquery-3.3.1.min.js"> </script>
+    <script src = "assets/js/getUser.js"> </script> 
+    <script src = "assets/js/getPublicMembers.js"> </script>    
+    <script src = "assets/js/main.js"> </script>
+
 
     <!--BUSCAR USER-->
     <input type="text" name="buscauser" id="buscaUser">
+
     <!--NÃO FOI ENCOTRADO-->
-    <div class = "list">
-        <li id ="naoEncotrado" style="display:none;"> SEM RESULTADOS</li>
+    <div class="list">
+        <li id="nenhumProduto" style="display: none;"> SEM RESULTADOS</li>
     </div>
-    <div id ="mensagem"></div>
-
+    <div id = "mensagem" > </div>
+    
     <script type="text/javascript">
-
-    $("#buscaUser").on("keyup", function() {
-           $("#msg").empty(); //Input executa uma função
-            let value = $(this).val().toLowerCase(); //armazenamento da variavel
-            //filtra as div em busca de um determinado valor
+        $("#buscaUser").on("keyup", function() {
+           $("#mensagem").empty();
+            let value = $(this).val().toLowerCase();
             $("#lista div").filter(function() {
-                //exibindo a div com os resultados
                 $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                 verificacao();
+                verificacao();
             });
         });
 
-    function verificacao(){
-        var resultEncontrado;
-        var html = $('#lista').contents();
+        function verificacao(){
+            var resultadoEncontrado;
+            var html = $('#lista').contents();
+
             for(var item of html){
                 if(!$(item).is(":hidden") && $(item).text().trim().length){
-                    resultEncontrado = true;
+                    resultadoEncontrado = true;
                 break;
                 }
+            }if(!resultadoEncontrado){
+                $("#mensagem").html("<h1> SEM RESULTADOS</h1>");
             }
-        if(!resultEncontrado){
-            $("#msg").html("<h1> SEM RESULTADOS</h1>");
         }
-    }  
-    </script>
+        </script>
 </body>
 </html>
